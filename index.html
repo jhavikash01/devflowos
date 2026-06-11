@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="DevFlow OS — a commercial-grade browser operating system." />
+<title>DevFlow OS</title>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/themes.css" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/windows.css" />
+<link rel="stylesheet" href="css/widgets.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- Boot Screen -->
+  <div id="boot-screen" class="boot-screen" role="status" aria-label="System booting">
+    <div class="boot-logo">
+      <svg viewBox="0 0 100 100" width="84" height="84" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7c5cff"/>
+            <stop offset="100%" stop-color="#23d3ff"/>
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="url(#lg1)" stroke-width="6"/>
+        <path d="M30 55 L45 70 L72 35" fill="none" stroke="url(#lg1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1>DevFlow OS</h1>
+      <div class="boot-progress"><div class="boot-progress-bar"></div></div>
+      <p class="boot-tip">Booting kernel · loading modules · starting services</p>
+    </div>
+  </div>
+
+  <!-- Login / Welcome Screen -->
+  <div id="welcome-screen" class="welcome-screen hidden" role="dialog" aria-label="Welcome">
+    <div class="welcome-bg"></div>
+    <div class="welcome-card">
+      <div class="avatar-ring">
+        <div class="avatar">Dev</div>
+      </div>
+      <h2 id="welcome-name">Welcome back</h2>
+      <p class="welcome-time" id="welcome-time"></p>
+      <button class="btn-primary" id="welcome-enter">Enter DevFlow OS</button>
+      <p class="hint">Press <kbd>Enter</kbd> to continue</p>
+    </div>
+  </div>
+
+  <!-- Desktop -->
+  <main id="desktop" class="desktop hidden" aria-label="Desktop">
+    <div class="wallpaper" id="wallpaper"></div>
+
+    <!-- Top Bar -->
+    <header class="topbar" role="banner">
+      <button class="topbar-btn" id="start-btn" aria-label="Open start menu">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>
+        <span>DevFlow</span>
+      </button>
+      <div class="topbar-search" role="search">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M10 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm10 16-5-5"/></svg>
+        <input id="global-search" type="search" placeholder="Search apps, files, notes…" aria-label="Global search" />
+        <kbd>⌘K</kbd>
+      </div>
+      <div class="topbar-tray">
+        <button class="tray-btn" id="theme-btn" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="tray-btn" id="notif-btn" aria-label="Open notifications">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 22a2.5 2.5 0 0 0 2.5-2.5h-5A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 1 0-14 0v5l-2 2v1h18v-1l-2-2z"/></svg>
+          <span class="badge" id="notif-badge">0</span>
+        </button>
+        <div class="tray-clock" id="tray-clock" aria-live="polite"></div>
+        <div class="tray-avatar" aria-label="User">Dev</div>
+      </div>
+    </header>
+
+    <!-- Desktop Icons -->
+    <section class="desktop-icons" aria-label="Desktop applications">
+      <button class="desk-icon" data-app="files"><div class="icon icon-files"></div><span>Files</span></button>
+      <button class="desk-icon" data-app="notes"><div class="icon icon-notes"></div><span>Notes</span></button>
+      <button class="desk-icon" data-app="browser"><div class="icon icon-browser"></div><span>Browser</span></button>
+      <button class="desk-icon" data-app="terminal"><div class="icon icon-terminal"></div><span>Terminal</span></button>
+      <button class="desk-icon" data-app="settings"><div class="icon icon-settings"></div><span>Settings</span></button>
+      <button class="desk-icon" data-app="calculator"><div class="icon icon-calc"></div><span>Calculator</span></button>
+    </section>
+
+    <!-- Widgets -->
+    <section class="widgets" id="widgets" aria-label="Desktop widgets">
+      <div class="widget widget-clock" data-widget="clock">
+        <div class="widget-handle" aria-hidden="true"></div>
+        <div class="w-clock-time" id="w-clock-time">--:--</div>
+        <div class="w-clock-date" id="w-clock-date"></div>
+      </div>
+      <div class="widget widget-weather" data-widget="weather">
+        <div class="widget-handle" aria-hidden="true"></div>
+        <div class="w-weather-temp">24°</div>
+        <div class="w-weather-loc">San Francisco</div>
+        <div class="w-weather-cond">Partly Cloudy</div>
+        <svg class="w-weather-icon" viewBox="0 0 64 64" width="48" height="48" aria-hidden="true">
+          <circle cx="24" cy="26" r="10" fill="#ffd166"/>
+          <ellipse cx="38" cy="38" rx="18" ry="10" fill="#e6ecff"/>
+        </svg>
+      </div>
+      <div class="widget widget-calendar" data-widget="calendar">
+        <div class="widget-handle" aria-hidden="true"></div>
+        <div class="w-cal-month" id="w-cal-month"></div>
+        <div class="w-cal-day" id="w-cal-day"></div>
+        <div class="w-cal-weekday" id="w-cal-weekday"></div>
+      </div>
+      <div class="widget widget-notes" data-widget="notes">
+        <div class="widget-handle" aria-hidden="true"></div>
+        <h4>Quick Notes</h4>
+        <textarea id="quick-notes" placeholder="Jot something down…" aria-label="Quick notes"></textarea>
+      </div>
+    </section>
+
+    <!-- Windows mount -->
+    <div id="windows-root" class="windows-root" aria-label="Open windows"></div>
+
+    <!-- Start Menu -->
+    <div id="start-menu" class="start-menu hidden" role="menu" aria-label="Start menu">
+      <div class="sm-header">
+        <div class="tray-avatar lg">Dev</div>
+        <div>
+          <div class="sm-user">DevFlow User</div>
+          <div class="sm-sub">Welcome to DevFlow OS OS</div>
+        </div>
+      </div>
+      <input class="sm-search" id="sm-search" placeholder="Search apps…" aria-label="Search apps"/>
+      <div class="sm-grid" id="sm-grid"></div>
+      <div class="sm-footer">
+        <button class="sm-foot-btn" data-app="settings">Settings</button>
+        <button class="sm-foot-btn" id="sm-lock">Lock</button>
+      </div>
+    </div>
+
+    <!-- Spotlight Search -->
+    <div id="spotlight" class="spotlight hidden" role="dialog" aria-label="Spotlight search">
+      <div class="spot-card">
+        <div class="spot-input">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M10 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm10 16-5-5"/></svg>
+          <input id="spot-q" placeholder="Search apps, files, notes…" autocomplete="off" />
+          <kbd>esc</kbd>
+        </div>
+        <div class="spot-results" id="spot-results"></div>
+      </div>
+    </div>
+
+    <!-- Notification Center -->
+    <aside id="notif-center" class="notif-center hidden" role="complementary" aria-label="Notifications">
+      <div class="nc-head">
+        <h3>Notifications</h3>
+        <button id="nc-clear" class="btn-ghost">Clear all</button>
+      </div>
+      <div id="nc-list" class="nc-list"></div>
+    </aside>
+
+    <!-- Toasts -->
+    <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Context Menu -->
+    <div id="ctx-menu" class="ctx-menu hidden" role="menu"></div>
+
+    <!-- Taskbar -->
+    <nav class="taskbar" id="taskbar" role="navigation" aria-label="Taskbar">
+      <div class="task-list" id="task-list"></div>
+    </nav>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@media (max-width:1280px){
+  .widgets{width:220px}
+  .desktop-icons{grid-template-columns:repeat(auto-fill,76px)}
+}
+@media (max-width:1024px){
+  .widgets{width:200px;right:14px}
+  .topbar-search{max-width:380px}
+}
+@media (max-width:820px){
+  .widgets{position:static;flex-direction:row;flex-wrap:wrap;width:auto;padding:60px 14px 0;overflow-x:auto}
+  .widget{flex:0 0 200px}
+  .desktop-icons{position:static;padding:14px;grid-template-columns:repeat(auto-fill,minmax(70px,1fr));max-width:100%}
+  .windows-root{inset:44px 0 70px 0}
+  .start-menu{width:calc(100vw - 28px)}
+  .notif-center{right:14px;left:14px;width:auto}
+}
+@media (max-width:600px){
+  .topbar{padding:6px 10px;gap:8px}
+  .topbar-btn span{display:none}
+  .topbar-search{font-size:12px;padding:5px 10px}
+  .topbar-search kbd{display:none}
+  .tray-clock{display:none}
+  .desk-icon{width:68px}
+  .icon{width:42px;height:42px;font-size:20px}
+  .win{min-width:280px;border-radius:10px}
+  .win-title{font-size:11px}
+  .taskbar{bottom:8px;border-radius:14px;padding:5px}
+  .task-item{width:36px;height:36px;font-size:16px}
+  .widget{flex:0 0 180px;padding:14px}
+  .w-clock-time{font-size:34px}
+  .calc-display{font-size:24px;padding:14px;min-height:56px}
+  .calc-btn{font-size:14px;min-height:40px}
+  .fs-side,.set-side{width:140px}
+  .notes-list{width:140px}
+}
+@media (max-width:420px){
+  .desktop-icons{grid-template-columns:repeat(4,1fr)}
+  .desk-icon{width:auto}
+  .topbar-search{max-width:none}
+  .win{min-width:240px}
+}

@@ -1,0 +1,123 @@
+.widgets {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 6;
+  width: 240px;
+  max-width: calc(100vw - 40px);
+}
+.widget {
+  position: relative;
+  background: var(--panel);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  color: var(--fg);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+.widget:hover {
+  transform: translateY(-2px);
+}
+.widget-handle {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 4px;
+  background: rgba(127, 127, 127, 0.3);
+  border-radius: 2px;
+  cursor: move;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.widget:hover .widget-handle {
+  opacity: 1;
+}
+.widget-clock {
+  text-align: center;
+}
+.w-clock-time {
+  font-size: 42px;
+  font-weight: 200;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -1px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.w-clock-date {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.widget-weather {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.widget-weather .w-weather-temp {
+  font-size: 34px;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+}
+.widget-weather .w-weather-loc {
+  font-size: 11px;
+  color: var(--muted);
+}
+.widget-weather .w-weather-cond {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.widget-weather .w-weather-icon {
+  margin-left: auto;
+}
+.widget-calendar {
+  text-align: center;
+}
+.w-cal-month {
+  font-size: 11px;
+  color: var(--danger);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.w-cal-day {
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1;
+}
+.w-cal-weekday {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+.widget-notes h4 {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.widget-notes textarea {
+  width: 100%;
+  min-height: 80px;
+  font-size: 12px;
+  color: var(--fg);
+  resize: none;
+  line-height: 1.5;
+  font-family: inherit;
+}

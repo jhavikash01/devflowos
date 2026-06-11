@@ -1,0 +1,79 @@
+:root,
+[data-theme="light"] {
+  --bg: #f4f5f9;
+  --fg: #0f1226;
+  --muted: #5b6076;
+  --panel: rgba(255, 255, 255, 0.72);
+  --panel-solid: #ffffff;
+  --border: rgba(15, 18, 38, 0.08);
+  --shadow: 0 20px 60px rgba(15, 18, 38, 0.18);
+  --accent: #5b6cff;
+  --accent-2: #23d3ff;
+  --danger: #ff5c7a;
+  --ok: #22c55e;
+  --warn: #f59e0b;
+  --window: rgba(255, 255, 255, 0.85);
+  --window-head: rgba(255, 255, 255, 0.92);
+  --topbar: rgba(255, 255, 255, 0.55);
+  --taskbar: rgba(255, 255, 255, 0.6);
+  --wallpaper: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 50%, #fbc2eb 100%);
+  --grad: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+[data-theme="dark"] {
+  --bg: #0b0d18;
+  --fg: #e8ecff;
+  --muted: #8a91b4;
+  --panel: rgba(20, 24, 42, 0.7);
+  --panel-solid: #171a2e;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  --accent: #7c5cff;
+  --accent-2: #23d3ff;
+  --window: rgba(22, 26, 46, 0.78);
+  --window-head: rgba(28, 32, 54, 0.9);
+  --topbar: rgba(12, 15, 28, 0.55);
+  --taskbar: rgba(12, 15, 28, 0.6);
+  --wallpaper:
+    radial-gradient(1200px 700px at 20% 10%, #1a1f4d 0%, transparent 60%),
+    radial-gradient(900px 600px at 80% 80%, #2a1257 0%, transparent 55%),
+    linear-gradient(135deg, #0a0d1f, #0f1330);
+}
+[data-theme="midnight"] {
+  --bg: #05060d;
+  --fg: #dbe2ff;
+  --muted: #7079a8;
+  --panel: rgba(8, 10, 22, 0.78);
+  --panel-solid: #0a0d1c;
+  --border: rgba(120, 140, 255, 0.12);
+  --shadow: 0 30px 100px rgba(0, 0, 0, 0.7);
+  --accent: #3b82f6;
+  --accent-2: #06b6d4;
+  --window: rgba(8, 10, 22, 0.85);
+  --window-head: rgba(12, 15, 30, 0.95);
+  --topbar: rgba(4, 6, 14, 0.7);
+  --taskbar: rgba(4, 6, 14, 0.75);
+  --wallpaper:
+    radial-gradient(1400px 800px at 30% 0%, #0a1a3d 0%, transparent 55%),
+    radial-gradient(900px 600px at 90% 100%, #0b2a4a 0%, transparent 50%),
+    #03050d;
+}
+[data-theme="cyber"] {
+  --bg: #0a0014;
+  --fg: #f0f8ff;
+  --muted: #a96dff;
+  --panel: rgba(20, 0, 40, 0.7);
+  --panel-solid: #180030;
+  --border: rgba(255, 0, 200, 0.25);
+  --shadow: 0 0 40px rgba(255, 0, 200, 0.25), 0 20px 60px rgba(0, 0, 0, 0.6);
+  --accent: #ff2bd6;
+  --accent-2: #00ffe1;
+  --window: rgba(20, 0, 40, 0.82);
+  --window-head: rgba(30, 0, 60, 0.92);
+  --topbar: rgba(10, 0, 20, 0.7);
+  --taskbar: rgba(10, 0, 20, 0.75);
+  --wallpaper:
+    radial-gradient(1000px 700px at 20% 10%, #3a006b 0%, transparent 60%),
+    radial-gradient(900px 600px at 80% 90%, #00566b 0%, transparent 55%),
+    linear-gradient(180deg, #0a0014, #15002a);
+  --grad: linear-gradient(135deg, #ff2bd6, #00ffe1);
+}
