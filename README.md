@@ -133,7 +133,9 @@ No frameworks. No libraries. No build tools.
 │   ├── icons/
 │   └── images/
 └── README.md
+
 ⚡ Performance Highlights
+
 Optimized DOM updates
 Event delegation
 Hardware-accelerated animations
@@ -141,7 +143,9 @@ Lightweight architecture
 Fast startup experience
 Responsive interactions
 Local-first data persistence
+
 🎯 What This Project Demonstrates
+
 Advanced JavaScript Architecture
 Complex UI State Management
 Window Management Systems
@@ -150,6 +154,7 @@ Accessibility Best Practices
 Browser Storage Techniques
 Frontend Performance Optimization
 Real-World Product Design
+
 🌍 Deployment
 
 The project can be deployed on:
@@ -157,9 +162,10 @@ The project can be deployed on:
 Vercel
 Netlify
 GitHub Pages
+
 📄 Resume Description
 
-Developed Lovable OS, a browser-based operating system featuring multi-window management, desktop widgets, application launching, notification systems, theme personalization, and responsive user interfaces using Vanilla JavaScript, HTML5, and CSS3.
+Developed devflow OS, a browser-based operating system featuring multi-window management, desktop widgets, application launching, notification systems, theme personalization, and responsive user interfaces using Vanilla JavaScript, HTML5, and CSS3.
 
 👨‍💻 Author
 
