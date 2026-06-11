@@ -3,7 +3,7 @@
 
 ### A Modern Browser-Based Operating System Experience
 
-Lovable OS is a fully interactive desktop environment built entirely with **HTML5, CSS3, and Vanilla JavaScript**. It recreates the feel of a modern operating system directly in the browser, featuring window management, desktop widgets, application launching, theming, notifications, and a polished user experience.
+Devflow OS is a fully interactive desktop environment built entirely with **HTML5, CSS3, and Vanilla JavaScript**. It recreates the feel of a modern operating system directly in the browser, featuring window management, desktop widgets, application launching, theming, notifications, and a polished user experience.
 
 Designed as a frontend engineering showcase, the project demonstrates advanced DOM manipulation, modular architecture, responsive design, accessibility practices, and performance-focused UI development without relying on any frameworks.
 
